@@ -1,24 +1,17 @@
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <h1>Imaginibus</h1>
             <div className="links">
-                <CustomLink href="/home" >Home</CustomLink>
-                <CustomLink href="/profile" >Profile</CustomLink>
+                <Link to="/home" >Home</Link>
+                <Link to="/profile" >Profile</Link>
+                <Link to="/login" >login</Link>
             </div>
         </nav>
     );
-}
-
-function CustomLink({ href, children, ...props }) {
-    return(
-        <ul>
-           <a href={href}>{children}</a> 
-        </ul>
-
-    )
-
 }
 
 export default Navbar;
